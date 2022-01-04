@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title> Github Search </title>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div><img src="img/logo.gif" class="bordered-image" /></div>
+                <div> This is a site to search Github for interesting projects.</div>
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section id="main"> 
+                <p> In this <em>sample site</em>, we'll show a list of <a href="http://github.com">Github</a> projects <span>and the data</span> about <strong>those projects</strong>.</p>
+                <form action="http://wilder.azurewebsites.net/echo" method="POST" class="bordered-image simple-form">
+                    <label for="searchPhrase">Search Phrase: </label>
+                    <input name="searchPhrase" id="searchPhrase" /><br/>
+                    <input type="checkbox" name="useStars" id="useStars" checked="true" />
+                    <label for="useStars">Use Stars?</label><br/>
+                    <label for="langChoice">Language: </label>
+                    <select name="langChoice" id="langChoice">
+                        <option>All</option>
+                        <option>Javascript</option>
+                        <option>C#</option>
+                        <option>Java</option>
+                        <option>Ruby</option>
+                    </select>
+                    <br/>
+                    <input type="submit" value="search" /> 
+                </form>
+            </section>
+        </div>
+    </body>
+</html>
