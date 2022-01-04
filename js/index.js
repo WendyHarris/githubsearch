@@ -11,10 +11,32 @@ toggleButton.on("click", function () {
     else toggleButton.text("Hide"); 
 });
 
-var gitHubSearch = "https://api.github.com/search/repositories?q=jquery+language:javascript&sort=stars"
+$("#gitHubSearchForm").on("submit", function () {
 
-$.get(gitHubSearch, function(r) {
-    displayResults(r.items); 
+    var searchPhrase = $("#searchPhrase").val();
+    var useStars = $("#useStars").val();
+    var langChoice = $("#langChoice").val(); 
+
+    if (searchPhrase) {
+
+        resultList.text("Performing search ... "); 
+
+        var gitHubSearch = "https://api.github.com/search/repositories?q=" + searchPhrase;
+
+        if (langChoice != "All") {
+            gitHubSearch += "+language:" + langChoice; 
+        }
+
+        if (useStars) {
+            gitHubSearch += "&sort=stars"; 
+        }
+
+        $.get(gitHubSearch, function(r) {
+            displayResults(r.items); 
+        });
+    }
+
+    return false; 
 });
 
 
