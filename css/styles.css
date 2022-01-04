@@ -7,6 +7,12 @@ header {
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px; 
+    background-color: darkgreen; 
+}
+
+html, body {
+    padding: 0px;
+    margin: 0px; 
 }
 
 .bordered-image {
@@ -20,6 +26,19 @@ body {
     color: #202020;
     margin: 20px 0px;
     padding: 5px;  
+}
+
+#results {
+    padding: 2px;
+    width: 600px; 
+    display: inline-block;
+    vertical-align: top;   
+}
+.simple-form {
+    padding: 2px;
+    width: 300px;
+    display: inline-block; 
+    vertical-align: top;   
 }
 
 .simple-form  label {
@@ -41,6 +60,17 @@ body {
 
 .container {
     width: 989px;
-    margin: 0 auto;  
+    margin: 0 auto; 
+    background-color: white;
+    padding: 5px;  
 }
 
+header nav {
+    float: right; 
+    margin-right: 5px; 
+}
+
+header nav li {
+    display: inline; 
+    font-size: 12px; 
+}
